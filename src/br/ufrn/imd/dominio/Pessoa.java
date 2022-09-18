@@ -1,9 +1,8 @@
 package br.ufrn.imd.dominio;
 
-public class Pessoa {
-
-	private String cpf;
-	private String nome;
+public abstract class Pessoa {
+	protected String cpf;
+	protected String nome;
 
 	public String getCpf(){
 		return this.cpf;

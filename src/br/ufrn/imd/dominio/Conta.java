@@ -84,6 +84,6 @@ public class Conta {
 		if (getClass() != obj.getClass())
 			return false;
 		Conta other = (Conta) obj;
-		return (this.numero == other.numero) && (this.agencia.equals(other.agencia));
+		return (this.numero == other.numero);
     }      
 }

@@ -1,6 +1,5 @@
 package br.ufrn.imd.dominio;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class Cliente extends Pessoa{

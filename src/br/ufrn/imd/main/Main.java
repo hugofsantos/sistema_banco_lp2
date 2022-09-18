@@ -3,8 +3,6 @@ package br.ufrn.imd.main;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import br.ufrn.imd.dominio.Agencia;
-import br.ufrn.imd.dominio.Banco;
 import br.ufrn.imd.dominio.Cliente;
 import br.ufrn.imd.dominio.Conta;
 

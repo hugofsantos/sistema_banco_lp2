@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Cliente extends Pessoa{
-    private ArrayList<Conta> contas;
+    private Conta conta;
 
     /**
      * Criar um objeto da classe criante
@@ -15,17 +15,17 @@ public class Cliente extends Pessoa{
         this.setNome(nome);
         this.setCpf(cpf);
 
-        this.contas = new ArrayList<>();
+        this.conta = null;
     }
 
     /**
      * Cria uma conta pro cliente
-     * @param conta Conta a ser inserida nas conjunto de contas do cliente
-     * @return true se a conta for adicionada com sucesso, false caso contrário
+     * @param conta : Conta que o cliente irá possuir
+     * @return true se a conta for cadastrada com sucesso, false caso contrário
      */
-    public boolean adicionarConta(Conta conta){
-        if(!this.contas.contains(conta)){
-            this.contas.add(conta);
+    public boolean criarConta(Conta conta){
+        if(conta != null){
+            this.conta = conta;
             return true;
         }
 
@@ -33,15 +33,18 @@ public class Cliente extends Pessoa{
     }
 
     /**
-     * Fecha uma conta do cliente
-     * @param conta : Conta a ser fechada
-     * @return {@code true} se a conta for fechada corretamente, {@code false} caso haja uma falha ao fechar conta
+     * Obter conta do cliente
+     * @return conta do cliente
      */
-    public boolean fecharConta(Conta conta){
-        if(!this.contas.contains(conta)) return false;
-        
-        this.contas.remove(conta);
-        return true;
+    public Conta getConta(){
+        return this.conta;
+    }
+
+    /**
+     * Fecha a conta do cliente
+     */
+    public void fecharConta(){
+        this.conta = null;
     }
 
     @Override
